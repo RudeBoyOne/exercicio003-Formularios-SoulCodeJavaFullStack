@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        fieldset{
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        label{
+            margin-top: 10px;
+        }
+
+        .labels{
+            margin-top: 15px;
+        }
+
+        .inputs{
+            margin-top: 2px;
+            height: 2em;
+            outline: 0;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+
+        button{
+            margin: 20px auto 5px auto;
+            width: 50%;
+            height: 2em;
+        }
+    </style>
+
+    <title>Formulários-Exer003</title>
+</head>
+<body>
+    
+    <fieldset >
+        <legend>Dados Pessoais</legend>
+        <form action="aboult.html" method="get">
+            
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" maxlength="50" placeholder="Digite seu nome" required class="inputs">
+            
+            <label for="sobrenome" class="labels">Sobrenome</label>
+            <input type="text" name="sobrenome" id="sobrenome" maxlength="50" placeholder="Digite seu sobrenome" required class="inputs">
+
+            <label for="cpf" class="labels">CPF</label>
+            <input type="number" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required class="inputs">
+
+            <label for="email" class="labels">Email</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required class="inputs">
+
+            <label for="senha" class="labels">Senha</label>
+            <input type="password" name="senha" id="senha" maxlength="50" placeholder="Escolha sua senha" required class="inputs">
+
+            <label for="identificacao" class="labels">Identidade de gênero</label>
+            <select name="identificacao" id="identificacao" required class="inputs">
+                <option value="F">Feminino</option>
+                <option value="M">Masculino</option>
+                <option value="O">Outro</option>
+                <option value="" selected disable >Escolha uma</option>
+            </select>
+
+            <label for="nascimento" class="labels">Data de nascimento</label>
+            <input type="date" name="nascimento" id="nascimento" required class="inputs">
+
+            <button type="submit">Enviar</button>
+
+        </form>
+    </fieldset>
+
+</body>
+</html>
